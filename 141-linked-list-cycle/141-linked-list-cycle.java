@@ -16,7 +16,7 @@ public class Solution {
         }
         List<ListNode> nodeList = new LinkedList<>();
         while(head.next != null){
-            if(nodeList.contains(head)){
+            if(nodeList.contains(head.next)){
                 return true;
             }
             nodeList.add(head);
