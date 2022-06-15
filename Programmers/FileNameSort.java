@@ -3,6 +3,7 @@ import java.util.Comparator;
 import java.util.Locale;
 
 /**
+ * 2018 KAKAO BLIND RECRUITMENT > [3차] 파일명 정렬
  * @author jhkim
  * @since 2022-06-05
  */
@@ -28,6 +29,7 @@ public class FileNameSort {
                 return compareResult;
             }
         });
+        System.out.println("files = " + files);
         return files;
     }
 
