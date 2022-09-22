@@ -40,16 +40,17 @@ public class Test {
 ```
 
 
+
 ## 답안
 ```java
 public class Test {
-public static void main(String[] args) {
-Scanner in=new Scanner(System.in);
-String input1 = in.next();
-String input2 = in.next();
-Test t = new Test();
-System.out.println(t.solution(input1, input2));
-}
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String input1 = in.next();
+        String input2 = in.next();
+        Test t = new Test();
+        System.out.println(t.solution(input1, input2));
+    }
 
     public String solution(String input1, String input2) {
         Map<Character,Integer> cntMap = new HashMap<>();
@@ -68,4 +69,3 @@ System.out.println(t.solution(input1, input2));
 
 
 ## TIL
-anagram이 알파벳 구분없이 문자 구성이 같은형태로 착각.
