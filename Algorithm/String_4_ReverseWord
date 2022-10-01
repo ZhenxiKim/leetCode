@@ -1,0 +1,54 @@
+## 나의 풀이
+``` java
+
+public class Test {
+    public static void main(String[] args){
+            Test T = new Test();
+            Scanner kb = new Scanner(System.in);
+            int n = Integer.parseInt(kb.nextLine());
+            for (int i = 0; i < n; i++) {
+                String str = kb.nextLine();
+                System.out.println(T.solution(str));
+            }
+        }
+
+        public String solution(String str) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = str.length()-1; i >= 0; i--) {
+                sb.append(str.charAt(i));
+            }
+            return sb.toString();
+        }
+}
+```
+
+
+## 답안
+```java
+public class Test {
+public static void main(String[] args) {
+Scanner in=new Scanner(System.in);
+String input1 = in.next();
+String input2 = in.next();
+Test t = new Test();
+System.out.println(t.solution(input1, input2));
+}
+
+    public String solution(String input1, String input2) {
+        Map<Character,Integer> cntMap = new HashMap<>();
+        for (char c: input1.toCharArray()) {
+            cntMap.put(c, cntMap.getOrDefault(c, 0) + 1);
+        }
+
+        for (char c: input2.toCharArray()) {
+            if(!cntMap.containsKey(c) || cntMap.get(c) == 0) return "NO";
+            cntMap.put(c, cntMap.getOrDefault(c, 0) - 1);
+        }
+        return "YES";
+    }
+}
+```
+
+
+## TIL
+anagram이 알파벳 구분없이 문자 구성이 같은형태로 착각.
