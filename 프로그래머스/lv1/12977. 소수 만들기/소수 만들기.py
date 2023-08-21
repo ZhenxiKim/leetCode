@@ -1,5 +1,6 @@
+import itertools
 import math
-from itertools import combinations
+
 
 def check_num(num):
     end = int(math.sqrt(num))
@@ -11,9 +12,8 @@ def check_num(num):
 
 def solution(nums):
     answer = 0
-    data = list(combinations(nums,3)) #중복을 허용하지 않고 순서가 의미있는 조합
-    for element in data:
-        result = check_num(sum(element))
-        if result:
+    data = itertools.combinations(nums, 3)
+    for ele in data:
+        if check_num(sum(ele)):
             answer += 1
     return answer
